@@ -262,7 +262,7 @@
       <workItem from="1521234823149" duration="1492000" />
       <workItem from="1521236350795" duration="329000" />
       <workItem from="1521236840821" duration="720000" />
-      <workItem from="1521237586426" duration="596000" />
+      <workItem from="1521237586426" duration="602000" />
     </task>
     <task id="LOCAL-00001" summary="updates to deploy to heroku">
       <created>1521235812892</created>
@@ -292,11 +292,18 @@
       <option name="project" value="LOCAL" />
       <updated>1521238178443</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="updates for heroku">
+      <created>1521238185181</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1521238185181</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52841000" />
+    <option name="totallyTimeSpent" value="52847000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2251" y="364" width="1680" height="1025" extended-state="6" />
