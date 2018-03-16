@@ -1,0 +1,17 @@
+.container-fluid{
+    width: 70%;
+    position: center;
+    background:  inherit;
+}
+.spacer{
+    height: 30px;
+}
+
+@media (max-width: 576px) {
+    .container-fluid{
+        width: 100%;
+    }
+    #spacer{
+        visibility: hidden;
+    }
+}

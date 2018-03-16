@@ -1,0 +1,16 @@
+.navbar-brand{
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+.navbar-text {
+    color: gray;
+    font-size: 1rem;
+
+}
+
+@media (max-width: 576px) {
+    .navbar-text{
+        padding-top: 0rem;
+    }
+}

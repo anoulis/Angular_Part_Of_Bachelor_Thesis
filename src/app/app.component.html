@@ -1,0 +1,13 @@
+<div class="container-fluid">
+    <app-header></app-header>
+    <div class="col-sm-12">
+        <app-input-field></app-input-field>
+        <button class="btn btn-primary" (click)="onFind()">Find</button>
+        <ul>
+            <li *ngFor="let item of values let i = index">
+                {{item['journal']}} {{item['score']}}
+            </li>
+        </ul>
+    </div>
+</div>
+
