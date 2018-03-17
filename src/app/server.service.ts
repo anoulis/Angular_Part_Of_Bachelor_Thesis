@@ -4,9 +4,11 @@ import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class ServerService {
+    // public url = 'http://127.0.0.1:5000/';
+    public url = 'https://flask-api-thesis-project.herokuapp.com';
     constructor(private  http: HttpClient) {}
     findJournals(mytitle: string, myabstract: string) {
-        return this.http.post('http://127.0.0.1:5000/',
+        return this.http.post(this.url,
             {observe: 'body', 'title': mytitle, 'abstract': myabstract });
     }
     /*
