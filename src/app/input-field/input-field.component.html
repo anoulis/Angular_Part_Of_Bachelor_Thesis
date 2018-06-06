@@ -1,3 +1,41 @@
+<div>
+<form #inputForm="ngForm" (ngSubmit)="onSubmit(inputForm.form)">
+  <div class="form-group">
+    <label for="journalTitle" class="text">Title</label>
+    <input
+            type="text"
+            class="form-control"
+            id="journalTitle"
+            name="title"
+            ngModel
+            #titleField="ngModel"
+            required
+            minlength="2">
+    <div *ngIf="titleField.touched && titleField.errors"></div>
+  </div>
+  <div class="form-group">
+    <label for="journalAbstract" class="text">Abstract</label>
+    <textarea
+            class="form-control"
+            id="journalAbstract"
+            rows="4"
+            ngModel
+            #abstractField="ngModel"
+            name="abstract"
+            required
+            minlength="2">
+        </textarea>
+  </div>
+  <div class="btn-toolbar"  style="margin-bottom:20px">
+    <button class="btn btn-primary" [disabled]="!inputForm.valid">Find</button>
+  </div>
+</form>
+</div>
+<!--<div><app-results  *ngFor="let item of values let i = index" [myvalues]= "item"></app-results></div>-->
+
+<div><app-results  *ngFor="let item of values " [myvalues]= "item"></app-results></div>
+
+<!--
 <div class="container">
   <div class="row">
     <div class="col-sm-10 col-md-8">
@@ -28,18 +66,30 @@
                   minlength="2">
         </textarea>
         </div>
-          <button class="btn btn-primary" [disabled]="!inputForm.valid">Find</button>
+        <button class="btn btn-primary" [disabled]="!inputForm.valid">Find</button>
       </form>
-
     </div>
+    <div class="row"> </div>
     <div class="row">
       <div class="col-md-12">
-        <ul>
+        <!--<ul>
           <li *ngFor="let item of values let i = index">
             {{item['journal']}} {{item['score']}}
           </li>
         </ul>
-      </div>
-    </div>
+        <div class="list-group" *ngFor="let item of values let i = index">
+          <a href="#" class="list-group-item"> {{item['journal']}}</a>
+        </div>-->
+<!--
+        <div class="col-md-12" *ngFor="let item of values let i = index">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">{{item['journal']}}</h5>
+              <p class="card-text">mplampmpmadlmaldmadlamldmadlamdl</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
   </div>
 </div>
+-->

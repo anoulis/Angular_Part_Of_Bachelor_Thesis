@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ServerService} from '../server.service';
+import {map} from 'rxjs/operators';
+import solr from 'solr-client';
+import {jsonpFactory} from '@angular/http/src/http_module';
 
 @Component({
   selector: 'app-input-field',
@@ -8,6 +11,7 @@ import { ServerService} from '../server.service';
 })
 export class InputFieldComponent implements OnInit {
   public values: any[];
+  public temp: any;
   public title: string;
   public abstract: string;
   constructor(private serverService: ServerService) {}
@@ -15,12 +19,23 @@ export class InputFieldComponent implements OnInit {
   ngOnInit() {}
   onSubmit(form) {
     this.title = form.value['title'], this.abstract = form.value['abstract'];
+    this.values = [];
     this.serverService.findJournals(this.title, this.abstract)
-        .subscribe( data => { console.log(data); this.values = data ['journals'] ; },
+        .subscribe( data => {
+            if (data.hasOwnProperty('response')) {
+                this.temp = data['response'];
+                for (const i in this.temp['docs']) {
+                    this.values.push(this.temp['docs'][i]['journal'].toString());
+                }
+                this.values = this.values.filter((v, i, a) => a.indexOf(v) === i);
+                this.values = this.values.slice(0, 10);
+                }
+            console.log(data.hasOwnProperty('response')); },
             // (response) => console.log(response),
             (error) => console.log(error)
         );
   }
+
    /*
     this.title = 'Long-term Recurrence and Complications Associated With Elective Incisional Hernia Repair.';
     this.abstract = 'Importance: Prosthetic mesh is frequently used to reinforce the repair of abdominal wall ' +

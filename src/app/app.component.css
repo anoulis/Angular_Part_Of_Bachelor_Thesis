@@ -1,3 +1,4 @@
+/*
 .container-fluid{
     width: 70%;
     position: center;
@@ -14,4 +15,11 @@
     #spacer{
         visibility: hidden;
     }
+}
+*/
+
+
+
+#show {
+    background-color: white;
 }
