@@ -1,8 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ServerService} from '../server.service';
-import {map} from 'rxjs/operators';
-import solr from 'solr-client';
-import {jsonpFactory} from '@angular/http/src/http_module';
 
 @Component({
   selector: 'app-input-field',
