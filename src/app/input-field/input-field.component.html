@@ -1,4 +1,4 @@
-<div>
+<div id="all">
 <form #inputForm="ngForm" (ngSubmit)="onSubmit(inputForm.form)">
   <div class="form-group">
     <label for="journalTitle" class="text">Title</label>
@@ -7,10 +7,12 @@
             class="form-control"
             id="journalTitle"
             name="title"
+            placeholder="Please enter Journal's title."
             ngModel
             #titleField="ngModel"
             required
-            minlength="2">
+            minlength="2"
+            maxlength="2000">
     <div *ngIf="titleField.touched && titleField.errors"></div>
   </div>
   <div class="form-group">
@@ -22,6 +24,7 @@
             ngModel
             #abstractField="ngModel"
             name="abstract"
+            placeholder="Please enter Journal's abstract."
             required
             minlength="2">
         </textarea>

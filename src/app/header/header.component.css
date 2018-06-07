@@ -9,16 +9,20 @@
 
 }
 
-@media (max-width: 576px) {
+@media (max-width: 1200px) {
+    .navbar-brand{
+        margin-bottom: -15px;
+    }
     .navbar-text{
         padding-top: 0rem;
+        margin-bottom: 10px;
     }
 }
 
 h4 {
-    color: black;
+    color: white;
 }
 
 #se_text {
-    color: black;
+    color: white;
 }

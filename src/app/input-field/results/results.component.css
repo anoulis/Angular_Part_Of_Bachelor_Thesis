@@ -1,3 +1,8 @@
 .card {
-    background-color: white;
+    background-color: whitesmoke;
+    opacity: 0.7;
+}
+h5 {
+    color:black;
+    font-weight: bold;
 }
