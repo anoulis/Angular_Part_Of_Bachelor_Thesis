@@ -17,6 +17,11 @@ export class InputFieldComponent implements OnInit {
   onSubmit(form) {
     this.title = form.value['title'], this.abstract = form.value['abstract'];
     this.values = [];
+    // fake output for deploy
+    this.values = ['Journal', 'Journal', 'Journal', 'Journal', 'Journal', 'Journal', 'Journal', 'Journal', 'Journal', 'Journal'];
+
+    // real work in localhost
+    /*
     this.serverService.findJournals(this.title, this.abstract)
         .subscribe( data => {
             if (data.hasOwnProperty('response')) {
@@ -31,6 +36,7 @@ export class InputFieldComponent implements OnInit {
             // (response) => console.log(response),
             (error) => console.log(error)
         );
+    */
   }
 
    /*
