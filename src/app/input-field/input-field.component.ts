@@ -22,13 +22,16 @@ export class InputFieldComponent implements OnInit {
 
     // real work in localhost
     /*
+    // calling the function for solr searching, editing the response so as to get top 10 journals name to show
     this.serverService.findJournals(this.title, this.abstract)
         .subscribe( data => {
             if (data.hasOwnProperty('response')) {
                 this.temp = data['response'];
+                // getting the returned journals names
                 for (const i in this.temp['docs']) {
                     this.values.push(this.temp['docs'][i]['journal'].toString());
                 }
+                // keep the unique entries with the same order and final the first 10 of them
                 this.values = this.values.filter((v, i, a) => a.indexOf(v) === i);
                 this.values = this.values.slice(0, 10);
                 }
