@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # ThesisProject
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.0.
@@ -29,4 +29,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 =======
 # thesis-angular
 Angular part of thesis project
->>>>>>> ea4af8b5cd89dafae0c8cf4271df8e4f7f669a7f
+
