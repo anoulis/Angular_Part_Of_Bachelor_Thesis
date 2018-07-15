@@ -1,11 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { solrUrl } from './config';
 
 @Injectable()
 export class ServerService {
     // public url = 'http://127.0.0.1:5000/';
     // declarations of solr url and other needed variables
-    public url = 'http://localhost:8983/solr/articlescollection/select?q=';
+    // public url = 'http://localhost:8983/solr/articlescollection/select?q=';
+    public url = solrUrl;
     public query: string;
     public pattern = /([\!\*\+\-\=\<\>\&\|\(\)\[\]\{\}\^\~\?\:\\/"])/g;
     public default_field = '&df=text_custom';

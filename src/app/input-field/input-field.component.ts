@@ -18,10 +18,9 @@ export class InputFieldComponent implements OnInit {
     this.title = form.value['title'], this.abstract = form.value['abstract'];
     this.values = [];
     // fake output for deploy
-    this.values = ['Journal', 'Journal', 'Journal', 'Journal', 'Journal', 'Journal', 'Journal', 'Journal', 'Journal', 'Journal'];
+    // this.values = ['Journal', 'Journal', 'Journal', 'Journal', 'Journal', 'Journal', 'Journal', 'Journal', 'Journal', 'Journal'];
 
     // real work in localhost
-    /*
     // calling the function for solr searching, editing the response so as to get top 10 journals name to show
     this.serverService.findJournals(this.title, this.abstract)
         .subscribe( data => {
@@ -39,7 +38,6 @@ export class InputFieldComponent implements OnInit {
             // (response) => console.log(response),
             (error) => console.log(error)
         );
-    */
   }
 
    /*
